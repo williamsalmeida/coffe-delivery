@@ -1,6 +1,14 @@
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/global'
+
+import Home from './pages/Home'
+
 export default function App() {
   return (
-    <h1>Coffe Delivery</h1>
+    <ThemeProvider theme={defaultTheme}>
+      <Home />
+      <GlobalStyle />
+    </ThemeProvider>
   )
 }
-
